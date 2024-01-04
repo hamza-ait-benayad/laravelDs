@@ -15,6 +15,16 @@ class documents extends Model
         'downloads',
         'file_path',
         'user_id',
-        'category_id'
+        'categorie_id'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Categorie::class);
+    }
 }
